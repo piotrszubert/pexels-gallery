@@ -1,6 +1,6 @@
 export const Hero = () => {
   return (
-    <div className="text-center space-y-4">
+    <div className="text-center space-y-4 mt-32">
       <h1 className="text-6xl font-serif italic">
         Heading
       </h1>
