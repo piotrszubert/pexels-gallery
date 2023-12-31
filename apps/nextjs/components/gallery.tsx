@@ -11,7 +11,7 @@ export const Gallery = () => {
       {images.map((image) => (
         <div
           key={image.title}
-          className="min-h-[300px] min-w-[100px] rounded-xl"
+          className="min-h-[300px] border min-w-[100px] rounded-xl"
         >
           <img src={image.url} alt={image.title} />
         </div>
