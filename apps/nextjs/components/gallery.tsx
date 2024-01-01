@@ -11,9 +11,9 @@ export const Gallery = () => {
       {images.map((image) => (
         <div
           key={image.title}
-          className="min-h-[300px] border min-w-[100px] rounded-xl"
+          className="border rounded-xl overflow-hidden"
         >
-          <img src={image.url} alt={image.title} />
+          <img className="object-cover w-full h-full rounded" src={image.url} alt={image.title} />
         </div>
       ))}
     </div>
