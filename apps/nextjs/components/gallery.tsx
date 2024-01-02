@@ -9,6 +9,12 @@ const images = [
   { url: "https://picsum.photos/200/400", title: "" },
   { url: "https://picsum.photos/200/400", title: "" },
   { url: "https://picsum.photos/200/400", title: "" },
+  { url: "https://picsum.photos/200/400", title: "" },
+  { url: "https://picsum.photos/200/400", title: "" },
+  { url: "https://picsum.photos/200/400", title: "" },
+  { url: "https://picsum.photos/200/400", title: "" },
+  { url: "https://picsum.photos/200/400", title: "" },
+  { url: "https://picsum.photos/200/400", title: "" },
 ]
 
 export const Gallery = () => {
@@ -17,7 +23,7 @@ export const Gallery = () => {
       {images.map((image, index) => (
         <div
           key={image.title}
-          className="border rounded-xl overflow-hidden"
+          className="rounded-xl overflow-hidden"
         >
           <img className="object-cover w-full h-full rounded" src={image.url + `?random=${index}`} alt={image.title} />
         </div>
