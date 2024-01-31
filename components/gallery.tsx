@@ -29,8 +29,21 @@ export const Gallery = () => {
     fetchImages()
   }, [])
 
+  console.log(typeof process.env.IMAGES_PER_PAGE)
+
   if (isLoading) {
-    return <p>Loading...</p>
+    const images = []
+    const iterations = 12
+
+    for (let i = 0; i < iterations; i++) {
+      images.push(<ImageCard key={i} loadingPlaceholder={true} />)
+    }
+
+    return (
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-4xl mx-auto mt-24">
+        {images}
+      </div>
+    )
   }
 
   return (
