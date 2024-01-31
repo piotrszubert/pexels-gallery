@@ -13,19 +13,20 @@ export const ImageCard = ({
 }: ImageCardProps) => {
   if (loadingPlaceholder) {
     return (
-      <div className="rounded w-[200px] h-[300px] animate-pulse bg-purple-900/20"></div>
+      <div className="rounded h-[500px] md:h-[400px] animate-pulse bg-purple-900/20"></div>
     )
   }
 
   return (
-    <Fragment key={image?.id}>
-      <img
+    <div className="relative h-[500px] md:h-[400px]">
+      <Image
         className="object-cover w-full h-full rounded"
-        width={400}
-        height={400}
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        loading="lazy"
         src={image?.src?.large!}
-        alt=""
+        alt={image?.alt ? image?.alt : "image"}
       />
-    </Fragment>
+    </div>
   )
 }
