@@ -1,36 +1,36 @@
-'use client';
+"use client"
 
-import { useState, useEffect, Fragment } from "react";
-import { ImageCard } from "./imageCard";
+import { useState, useEffect, Fragment } from "react"
+import { ImageCard } from "./imageCard"
 
 export const Gallery = () => {
-  const [images, setImages] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [images, setImages] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await fetch(`/api/images`);
+        const response = await fetch(`/api/images`)
 
         if (!response.ok) {
-          setIsLoading(false);
-          throw new Error("Failed to fetch data");
+          setIsLoading(false)
+          throw new Error("Failed to fetch data")
         }
 
-        const data = await response.json();
-        setIsLoading(false);
-        setImages(data.data.photos);
+        const data = await response.json()
+        setIsLoading(false)
+        setImages(data.data.photos)
       } catch (error) {
-        setIsLoading(false);
-        console.error(error);
+        setIsLoading(false)
+        console.error(error)
       }
-    };
+    }
 
-    fetchImages();
-  }, []);
+    fetchImages()
+  }, [])
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <p>Loading...</p>
   }
 
   return (
@@ -39,5 +39,5 @@ export const Gallery = () => {
         <ImageCard image={image} />
       ))}
     </div>
-  );
-};
+  )
+}

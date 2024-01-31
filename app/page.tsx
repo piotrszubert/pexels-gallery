@@ -1,7 +1,7 @@
-import { Footer } from "@/components/footer";
-import { Gallery } from "@/components/gallery";
-import { Hero } from "@/components/hero";
-import { Suspense } from "react";
+import { Footer } from "@/components/footer"
+import { Gallery } from "@/components/gallery"
+import { Hero } from "@/components/hero"
+import { Suspense } from "react"
 
 export default function Home() {
   return (

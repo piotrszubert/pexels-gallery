@@ -5,11 +5,12 @@ export const Hero = () => {
         Heading
       </h1>
       <p className="max-w-sm mx-auto dark:text-gray-400 text-gray-600">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, tempora?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+        tempora?
       </p>
       <button className="px-3 py-2 font-semibold text-sm rounded-xl bg-purple-500 hover:bg-purple-500/90 transition-colors duration-500">
         Get started
       </button>
     </div>
-  );
+  )
 }
