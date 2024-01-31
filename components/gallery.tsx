@@ -29,8 +29,6 @@ export const Gallery = () => {
     fetchImages()
   }, [])
 
-  console.log(typeof process.env.IMAGES_PER_PAGE)
-
   if (isLoading) {
     const images = []
     const iterations = 12
@@ -48,8 +46,8 @@ export const Gallery = () => {
 
   return (
     <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-4xl mx-auto mt-24">
-      {images.map((image) => (
-        <ImageCard image={image} />
+      {images.map((image, index) => (
+        <ImageCard key={index} image={image} />
       ))}
     </div>
   )
