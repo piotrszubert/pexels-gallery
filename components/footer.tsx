@@ -8,6 +8,9 @@ export const Footer = () => {
       &copy; 2023
       <br />
       All rigths reserved.
+      <div className="mt-6">
+        <a href="https://www.pexels.com">Photos provided by Pexels</a>
+      </div>
     </footer>
   )
 }
