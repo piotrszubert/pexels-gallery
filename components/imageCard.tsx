@@ -1,6 +1,5 @@
 import { Photo } from "@/types"
 import Image from "next/image"
-import { Fragment } from "react"
 
 interface ImageCardProps {
   image?: Photo
@@ -20,7 +19,7 @@ export const ImageCard = ({
   return (
     <div className="relative h-[500px] md:h-[400px]">
       <Image
-        className="object-cover w-full h-full rounded"
+        className="object-cover rounded"
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         loading="lazy"
