@@ -1,7 +1,7 @@
 export async function GET() {
-  const apiKey = process.env.PEXELS_API_KEY;
+  const apiKey = process.env.PEXELS_API_KEY
 
-  if(!apiKey) {
+  if (!apiKey) {
     return Response.json(
       { message: "Pexels API key not found in environment variables" },
       { status: 401 }
@@ -16,12 +16,12 @@ export async function GET() {
         Authorization: apiKey,
       },
       next: {
-        revalidate: 3600
-      }
-    },
+        revalidate: 43200, //12h
+      },
+    }
   )
 
   const data = await res.json()
 
-  return Response.json({ data }, {status: 200})
+  return Response.json({ data }, { status: 200 })
 }
