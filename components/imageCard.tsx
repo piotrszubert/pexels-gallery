@@ -1,4 +1,5 @@
 import { Photo } from "@/types"
+import { Heart, Info, Share } from "lucide-react"
 import Image from "next/image"
 
 interface ImageCardProps {
@@ -26,10 +27,16 @@ export const ImageCard = ({
         src={image?.src?.large!}
         alt={image?.alt ? image?.alt : "image"}
       />
-      <div className="absolute overflow-hidden -bottom-10 group-hover:bottom-0 w-full transition-all duration-300">
-        <div className="py-2 px-3 backdrop-blur-sm bg-purple-900/60 w-full">
-          <button>
-            Like
+      <div className="absolute overflow-hidden -bottom-20 group-hover:bottom-0 w-full transition-all duration-300">
+        <div className="flex items-center jus gap-3 py-2 px-3 backdrop-blur-sm bg-purple-900/60 w-full">
+          {/* <button className="inline-flex items-center justify-center">
+            <Heart size={24} strokeWidth={1.5} />
+          </button>
+          <button className="inline-flex items-center justify-center">
+            <Share size={24} strokeWidth={1.5} />
+          </button> */}
+          <button className="inline-flex items-center justify-center">
+            <Info size={24} strokeWidth={1.5} />
           </button>
         </div>
       </div>
