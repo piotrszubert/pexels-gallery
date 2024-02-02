@@ -1,18 +1,26 @@
 "use client"
 
 import { Dialog } from "@headlessui/react"
-import { Photo } from "@/types"
-import { ExternalLink } from "lucide-react"
+import { ExternalLink, X } from "lucide-react"
 import { useImageModal } from "@/hooks/useImageModal"
 
 export const ImageModal = () => {
-  const { isModalOpen, selectedImage, closeModal } = useImageModal();
+  const { isModalOpen, selectedImage, closeModal } = useImageModal()
 
   return (
-    // <div className=" inset-0 grid place-items-center">
-      <Dialog open={isModalOpen} onClose={closeModal} className="border rounded-xl max-w-lg p-4">
-        <Dialog.Panel>
-          <Dialog.Title>Image details</Dialog.Title>
+    <Dialog open={isModalOpen} onClose={closeModal}>
+      <div
+        className="fixed inset-0 bg-purple-900/15 backdrop-blur"
+        aria-hidden="true"
+      />
+      <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
+        <Dialog.Panel className="bg-black max-w-lg w-full rounded-lg border border-zinc-800 shadow-2xl p-4">
+          <div className="flex items-center justify-between mb-6">
+            <Dialog.Title className="text-lg">Image details</Dialog.Title>
+            <button onClick={closeModal} className="hover:text-purple-400">
+              <X />
+            </button>
+          </div>
           <Dialog.Description>{selectedImage?.alt}</Dialog.Description>
 
           <p>
@@ -32,14 +40,8 @@ export const ImageModal = () => {
               </a>
             </div>
           </p>
-
-         <button
-          onClick={closeModal}
-         >
-          Close
-         </button>
         </Dialog.Panel>
-      </Dialog>
-    // </div>
-  );
-};
+      </div>
+    </Dialog>
+  )
+}
