@@ -1,5 +1,5 @@
 import { Photo } from "@/types"
-import { Heart, Info, Share } from "lucide-react"
+import { Heart, Info, Share2 } from "lucide-react"
 import Image from "next/image"
 
 interface ImageCardProps {
@@ -29,13 +29,13 @@ export const ImageCard = ({
       />
       <div className="absolute overflow-hidden -bottom-20 group-hover:bottom-0 w-full transition-all duration-300">
         <div className="flex items-center jus gap-3 py-2 px-3 backdrop-blur-sm bg-purple-900/60 w-full">
-          {/* <button className="inline-flex items-center justify-center">
+          {/* <button className="inline-flex items-center justify-center p-1 rounded hover:scale-110 duration-300">
             <Heart size={24} strokeWidth={1.5} />
-          </button>
-          <button className="inline-flex items-center justify-center">
-            <Share size={24} strokeWidth={1.5} />
           </button> */}
-          <button className="inline-flex items-center justify-center">
+          <button className="inline-flex items-center justify-center p-1 rounded hover:scale-110 duration-300">
+            <Share2 size={24} strokeWidth={1.5} />
+          </button>
+          <button className="inline-flex items-center justify-center p-1 rounded hover:scale-110 duration-300">
             <Info size={24} strokeWidth={1.5} />
           </button>
         </div>
