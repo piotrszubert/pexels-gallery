@@ -9,13 +9,11 @@ export default async function Notes() {
   return (
     <div className="grid place-items-center min-h-screen">
       <div>
-      {notes?.map((note) => (
-        <div
-          key={note.title}
-        >
-          {note.id} - {note.title}
-        </div>
-      ))}
+        {notes?.map((note) => (
+          <div key={note.title}>
+            {note.id} - {note.title}
+          </div>
+        ))}
       </div>
     </div>
   )
