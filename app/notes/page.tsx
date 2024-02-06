@@ -7,12 +7,14 @@ export default async function Notes() {
   const { data: notes } = await supabase.from("notes").select()
 
   return (
-    <div>
-      {notes?.map((note) => (
-        <div>
-          {note.id} - {note.title}
-        </div>
-      ))}
+    <div className="grid place-items-center min-h-screen">
+      <div>
+        {notes?.map((note) => (
+          <div key={note.title}>
+            {note.id} - {note.title}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
