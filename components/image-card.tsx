@@ -37,9 +37,9 @@ export const ImageCard = ({
             {/* <button className="inline-flex items-center justify-center p-1 rounded hover:scale-110 duration-300">
             <Heart size={24} strokeWidth={1.5} />
           </button> */}
-            <button className="inline-flex items-center justify-center p-1 rounded hover:scale-110 duration-300">
+            {/* <button className="inline-flex items-center justify-center p-1 rounded hover:scale-110 duration-300">
               <Share2 size={24} strokeWidth={1.5} />
-            </button>
+            </button> */}
 
             {/* OPEN MODAL BUTTON */}
             {/* <button className="inline-flex items-center justify-center p-1 rounded hover:scale-110 duration-300">

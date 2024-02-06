@@ -1,7 +1,6 @@
 import { Photo } from "@/types"
 import { Dialog } from "@headlessui/react"
 import { ExternalLink, X } from "lucide-react"
-import { useState } from "react"
 
 export const ImageModal = ({
   open,
