@@ -16,7 +16,7 @@ export async function GET() {
         Authorization: apiKey,
       },
       next: {
-        revalidate: 43200, //12h
+        revalidate: 3600, //1h
       },
     }
   )
