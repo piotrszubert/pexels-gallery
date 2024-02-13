@@ -16,7 +16,7 @@ export async function GET() {
         Authorization: apiKey,
       },
       next: {
-        revalidate: 3600, //1h
+        revalidate: 0, //dynamic
       },
     }
   )
