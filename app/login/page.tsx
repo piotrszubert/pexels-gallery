@@ -31,9 +31,13 @@ export default function LoginPage() {
           />
         </div>
         <div className="flex flex-col gap-3 mt-6">
-          <button className="border px-2 py-1 rounded" formAction={login}>Log in</button>
+          <button className="border px-2 py-1 rounded" formAction={login}>
+            Log in
+          </button>
           <div className="border-b border-zinc-500 mx-24"></div>
-          <button className="underline" formAction={signup}>Sign up</button>
+          <button className="underline" formAction={signup}>
+            Sign up
+          </button>
         </div>
       </form>
     </main>

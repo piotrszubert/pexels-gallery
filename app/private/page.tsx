@@ -11,7 +11,6 @@ export default async function PrivatePage() {
   if (error || !data?.user) {
     // redirect("/")
     return <p>You need to log in</p>
-
   }
 
   return <p>Hello {data.user.email}</p>
