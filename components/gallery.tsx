@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, Fragment } from "react"
+import { useState, useEffect } from "react"
 import { ImageCard } from "./image-card"
 
 export const Gallery = () => {

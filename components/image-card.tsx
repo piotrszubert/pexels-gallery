@@ -34,17 +34,6 @@ export const ImageCard = ({
         />
         <div className="absolute overflow-hidden -bottom-20 group-hover:bottom-0 w-full transition-all duration-300">
           <div className="flex items-center jus gap-3 py-2 px-3 backdrop-blur-sm bg-purple-900/60 w-full">
-            {/* <button className="inline-flex items-center justify-center p-1 rounded hover:scale-110 duration-300">
-            <Heart size={24} strokeWidth={1.5} />
-          </button> */}
-            {/* <button className="inline-flex items-center justify-center p-1 rounded hover:scale-110 duration-300">
-              <Share2 size={24} strokeWidth={1.5} />
-            </button> */}
-
-            {/* OPEN MODAL BUTTON */}
-            {/* <button className="inline-flex items-center justify-center p-1 rounded hover:scale-110 duration-300">
-            <Info size={24} strokeWidth={1.5} />
-          </button> */}
             <button
               onClick={() => setIsOpen(true)}
               className="inline-flex items-center justify-center p-1 rounded hover:scale-110 duration-300"
@@ -53,13 +42,6 @@ export const ImageCard = ({
             </button>
           </div>
         </div>
-        {/* <div className="absolute overflow-hidden -top-10 group-hover:top-0 w-full transition-all duration-300">
-        <div className="py-2 px-3 backdrop-blur-sm bg-purple-900/60 w-full">
-          <button>
-            Like
-          </button>
-        </div>
-      </div> */}
       </div>
       <ImageModal open={isOpen} close={() => setIsOpen(false)} image={image!} />
     </>
