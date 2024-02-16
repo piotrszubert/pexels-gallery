@@ -86,7 +86,7 @@ export const ImageModal = ({
                     {Object.entries(image.src).map(([size, url]) => (
                       <a
                         target="_blank"
-                        className="border rounded-xl py-1 px-2 hover:bg-white hover:text-black duration-300"
+                        className="border rounded-lg py-1 px-2 hover:bg-white hover:text-black duration-300"
                         key={size}
                         href={url}
                       >
@@ -101,7 +101,7 @@ export const ImageModal = ({
                   <div>
                     <a
                       target="_blank"
-                      className="border px-2 py-1 inline-flex gap-2 items-center group hover:bg-white hover:text-black duration-300"
+                      className="underline rounded-lg px-2 py-1 inline-flex gap-2 items-center group hover:bg-white hover:text-black duration-300"
                       href={image?.photographer_url}
                     >
                       {image?.photographer}
